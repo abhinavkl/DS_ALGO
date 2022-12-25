@@ -8,27 +8,30 @@ namespace DS_ALGO.Programs
 {
     internal class _3_Even_Positions_Are_Greater_Than_Odd
     {
-        public int[] InputArray { get; set; }
+        public int[] arr { get; set; }
         public _3_Even_Positions_Are_Greater_Than_Odd()
         {
-            InputArray= new int[] { 1,9,2,8,3,7,4,6,5,10 };
+            arr= new int[] { 1,9,2,8,3,7,4,6,5,10 };
         }
 
         public void Solve()
         {
-            for (int index = 1; index < InputArray.Length; index++)
+            for (int index = 1; index < arr.Length; index++)
             {
+                //even
+                //swap when current position is lesser than its previous.
                 if ((index % 2) == 0) 
                 {
-                    if (InputArray[index] < InputArray[index - 1])
+                    if (arr[index] < arr[index - 1])
                     {
                         Swap(index);
                     }
                 }
                 //odd
+                //swap when current position is greater than its previous.
                 else
                 {
-                    if (InputArray[index] > InputArray[index - 1])
+                    if (arr[index] > arr[index - 1])
                     {
                         Swap(index);
                     }
@@ -38,9 +41,9 @@ namespace DS_ALGO.Programs
 
         void Swap(int index)
         {
-            InputArray[index] = InputArray[index - 1] ^ InputArray[index];
-            InputArray[index - 1] = InputArray[index - 1] ^ InputArray[index];
-            InputArray[index] = InputArray[index - 1] ^ InputArray[index];
+            arr[index] = arr[index - 1] ^ arr[index];
+            arr[index - 1] = arr[index - 1] ^ arr[index];
+            arr[index] = arr[index - 1] ^ arr[index];
         }
 
     }
