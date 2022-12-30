@@ -28,6 +28,7 @@ namespace DS_ALGO.Programs
                 {
                     endIndex = i;
                     Console.WriteLine($" The sum is found from {startIndex} to {endIndex} ");
+                    break;
                 }
 
                 while (cumSum > sum)
