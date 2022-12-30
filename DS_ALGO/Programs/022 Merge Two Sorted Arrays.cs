@@ -49,6 +49,7 @@ namespace DS_ALGO.Programs
                 {
                     largerArrayPointer = NextGreaterElementIndex(smallerArray,0,smallerArrayPointer,searchKey);
                 }
+                break;
             }
         }
 
